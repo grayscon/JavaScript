@@ -4,12 +4,8 @@
   <script type="text/javascript">
     var howWrong = 0;
     function handleChange(input) {
-      var element = document.createElement("li");
-      var node = document.createTextNode(input.value);
-      element.appendChild(node);
-
-      var games = document.getElementById("games");      
-      games.appendChild(element);
+      var games = document.getElementById("games");
+      games.innerHTML = games.innerHTML + "<li>" + input.value + "</li>";
 
       input.value = "";
     }
