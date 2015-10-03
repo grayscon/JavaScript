@@ -5,7 +5,11 @@
     var howWrong = 0;
     function addGame(game) {
       var games = document.getElementById("games");
-      games.innerHTML = games.innerHTML + "<li>" + game + "</li>";
+      games.innerHTML = games.innerHTML + "<li onClick='removeGame(this)'>" + game + "</li>";
+    }
+    function removeGame(game) {
+      var games = document.getElementById("games");
+      games.removeChild(game);
     }
   </script>
 </head>
