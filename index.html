@@ -4,17 +4,9 @@
   <script type="text/javascript">
     var howWrong = 0;
     function handleChange(input) {
-      if (input.value == "Hello World!") {
-        console.log(input.value);
-        howWrong = 0;
-      } else {
-        if (howWrong < 3) {
-          console.log("Don't say that");
-        } else {
-          console.log("Psst say Hello World!");
-        }
-        howWrong = howWrong + 1;
-      }
+      var games = document.getElementById("games");
+      var node = document.createTextNode(input.value);
+      games.appendChild(node);
 
       input.value = "";
     }
@@ -24,7 +16,7 @@
 <body>
   <h1>Games</h1>
 
-  <ul>
+  <ul id="games">
     <li>Chess</li>
     <li>Tic Tac Toe</li>
   </ul>
