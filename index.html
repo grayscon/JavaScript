@@ -4,9 +4,12 @@
   <script type="text/javascript">
     var howWrong = 0;
     function handleChange(input) {
-      var games = document.getElementById("games");
+      var element = document.createElement("li");
       var node = document.createTextNode(input.value);
-      games.appendChild(node);
+      element.appendChild(node);
+
+      var games = document.getElementById("games");      
+      games.appendChild(element);
 
       input.value = "";
     }
