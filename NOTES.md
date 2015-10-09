@@ -132,6 +132,3 @@ and </script> tag
         <li onClick='removeGame(this)'>Chess</li>
         <li onClick='removeGame(this)'>Tic Tac Toe</li>
       </ul>
-
-
-
